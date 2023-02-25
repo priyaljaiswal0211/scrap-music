@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="/assets/spotify.png">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+
+	<title> Scrap-Music | Home</title>
+
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="app.js" defer></script>
+</head>
+
+<body class="dark-theme">
+	<header> <h1> Scrap-Music <img src="https://img.icons8.com/cotton/50/000000/piano.png"/>   </h1>  </header>
+	
+	<h3 class="borderh"> Download any song with a simple search! </h3>
+ 
+	
+	
+
+	<div id="switcher">
+		<i class="ri-sun-cloudy-line"></i>
+	</div>
+
+	<main>
+		<div class="card">
+			<div class="card-header">
+				<span class="card-tab" id="search">
+					<i class="icon ri-search-2-line"></i>Search
+				</span>
+
+				<span class="card-tab" id="download">
+					<i class="icon ri-video-download-line"></i>Download
+				</span>
+			</div>
+
+			<div class="card-search">
+				<form>
+					<input class="input-field" type="text" placeholder="Enter Song Title" required autofocus>
+					<button class="search-button" type="submit">Search</button>
+				</form>
+			</div>
+
+			<div class="card-loading hidden">
+				<div id="loader">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+			</div>
+
+			<div class="card-download hidden">
+				<div class="download-start">
+					<div class="title-container">
+						Song Title:
+						<div class="song-title"></div>
+					</div>
+					<div class="qr-container">
+						<img id="qr-code" alt="QR Code">
+						Scan the Code for more Options
+					</div>
+				</div>
+
+				<div class="download-mid">
+					<div class="song-btns">
+						<iframe class="frame" id="mp3" scrolling="no"></iframe>
+						<iframe class="frame" id="mp4" scrolling="no"></iframe>
+					</div>
+				</div>
+
+				<div class="download-end">
+					<div class="thumbnail-container">
+						<img id="thumbnail" alt="thumbnail" id="thumbnail">
+
+						<a id="yt-link" target="_blank">
+							<div class="listen">
+								<i class="ri-play-circle-line"></i>
+								<span id="listen-text">Listen on YouTube</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<div class="toast">
+		<div class="toast-icon">
+			<i class="ri-error-warning-line"></i>
+		</div>
+		<div class="toast-text">
+			An Error Occurred
+		</div>
+	</div>
+
+	<footer>
+		Made with ❤️ by <a href="https://parthshukla.netlify.app">Parth Shukla</a>
+	</footer>
+</body>
+
+</html>
